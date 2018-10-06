@@ -1,0 +1,8 @@
+{
+  "javascript.preferences.quoteStyle": "double",
+  "prettier.singleQuote": false,
+  "editor.tabSize": 4,
+  "prettier.eslintIntegration": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false
+}
