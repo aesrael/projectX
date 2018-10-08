@@ -1,6 +1,9 @@
 import User from "../models/User";
 import passport from "passport";
 
+export const getUserLogin = (req, res) => {
+	res.status(200).json('login');
+};
 export const userSignup = (req, res, next) => {
 	const { email, password, confirmPassword } = req.body;
 
@@ -8,8 +11,8 @@ export const userSignup = (req, res, next) => {
 		password,
 		email,
 		isAdmin: false
-  });
-  
+	});
+
 	User.findOne(
 		{
 			email: req.body.email
