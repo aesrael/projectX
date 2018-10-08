@@ -1,9 +1,9 @@
 import express from "express";
 import next from "next";
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 import passport from "passport";
 import LocalStrategy from "passport-local";
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
@@ -14,12 +14,12 @@ app
 	.prepare()
 	.then(() => {
 		const server = express();
-/**
- * Load environment variables from .env file,store of API keys and passwords
- */
-dotenv.load({
-	path: ".env.example"
-  });
+		/**
+		 * Load environment variables from .env file,store of API keys and passwords
+		 */
+		dotenv.load({
+			path: ".env.example"
+		});
 
 		server.use("/", routes);
 		server.get("*", (req, res) => {
